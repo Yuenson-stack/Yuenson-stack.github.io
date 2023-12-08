@@ -96,10 +96,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/archives/archives/3/">
+  <link rel="canonical" href="http://yoursite-url/undefined/概率统计1——概率/">
   <title>
     
-      朝命而夕饮冰的主页
+      概率统计1——概率 - 朝命而夕饮冰的主页
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -235,29 +235,7 @@
           <!-- LangSelect -->
           
           
-          <!-- LangSelect start -->
-          <!-- LangSelect -->
-<li>
-  <a id="lang-select-label"><i class="fa fa-globe"></i>
-    <span>
-      English
-    </span>
-    <select id="lang-select" data-canonical="archives/archives/3/index.html">
-      
-      
-      <option value="en"  selected >
-        English
-      </option>
-      
-      <option value="cn" >
-        简体中文
-      </option>
-      
-    </select>
-  </a>
-</li>
-
-          <!-- LangSelect end -->
+          
           
           
         </ul>
@@ -319,9 +297,9 @@
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/tag_bg.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url(''); */
       
     }
 
@@ -339,10 +317,34 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>朝命而夕饮冰</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">三尺微命 一介书生 光阴虚度 学问无成</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+            </div>
+            <h1>概率统计1——概率</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">
+              Posted by Samson Yuen on
+              2023-10-31
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">10</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+
+
           </div>
           
         </div>
@@ -383,744 +385,204 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
+
+        <h2 id="基本概念">基本概念</h2>
+<ul>
+<li><strong>随机试验</strong>:对一个不确定现象通过观察，测量，实验等手段获取其结果的过程</li>
+<li><strong>样本空间</strong>:所有随机试验结果的总和，如掷色子的样本空间为${1,2,3,4,5,6}$,记作$\Omega$。<strong>样本空间可以是无限集</strong></li>
+<li><strong>随机事件</strong>: 样本空间的子集</li>
+<li><strong>样本点</strong>:样本空间中的元素，也就是一次随机试验的单个结果，记作$\omega$</li>
+<li><strong>互不相容事件</strong>:$事件A,B不同时发生，即A\cap B=\phi$</li>
+<li><strong>对立事件</strong>:$A,B互不相容且A \cup B=\Omega,记作A=\bar{B},B=\bar{A}$</li>
+<li><strong>完备事件组:</strong>$A_1,A_2,\cdots,A_n两两互不相容，且\bigcup_{i=1}^{n}A_i=\Omega$</li>
+</ul>
+<blockquote>
+<p>$\Omega$——必然事件——样本空间——全集<br>
+$\phi$——不可能事件——空集</p>
+</blockquote>
+<h2 id="概率的公理化描述">概率的公理化描述</h2>
+<p>概率测度（Probability Measure）是一个从事件映射到实数域的实函数，其定义域为样本空间$\Omega$，上域为实数域$R$，值域为$[0,1]$.任何一个概率测度都必须满足以下公理：</p>
+<h3 id="基本公理">基本公理</h3>
+<ul>
+<li><strong>非负性公理</strong>:任何一个事件A发生的概率不可能为负，即$0 \le P(A)$</li>
+<li><strong>规范性公理</strong>:样本空间作为一个事件必然发生，即$P(\Omega)=1$</li>
+<li><strong>完全可加性公理</strong>:若事件$A_1,A_2,A_3,\cdots,A_n$两两互不相容，则$P(A_1+A_2+A_3+\cdots+A_n)=P(A_1)+P(A_2)+P(A_3)+\cdots+P(A_n),n\in N^+$</li>
+</ul>
+<h3 id="基本公理的推论">基本公理的推论</h3>
+<ol>
+<li>$P(A)=1-P(\bar{A})$</li>
+</ol>
+<blockquote>
+<p><strong>证明</strong>：因为事件 $A$ 与 $\bar(A)$ 两两互不相容，即 $A\cap \bar{A}=\phi,A\cup \bar{A}=\Omega$ ,故$P(\Omega)=P(A+\bar{A})=P(A)+P(\bar{A})=1$ ,证毕</p>
+</blockquote>
+<ol start="2">
+<li>$P(A-B)=P(A)-P(AB)$(事件的减法性原理）</li>
+</ol>
+<blockquote>
+<p><strong>证明</strong>：$A=(A-B) \cup AB$ ,又因为显然 $A-B$ 与$AB$ 互不相容，则根据公理$3$，有$P(A)=P(A-B)+P(AB)$,证毕</p>
+</blockquote>
+<ol start="3">
+<li>$P(A+B)=P(A)+P(B)-P(AB)$(事件的加法性原理)</li>
+</ol>
+<blockquote>
+<p><strong>证明</strong>：因为$A \cup B=A\cup (B-AB)$ ,且$A$与 $(B-AB)$ 互不相容，则显然根据完全可加性公理，有$P(A+B)=P(A)+P(B-AB)$.根据事件的减法性原理，有$P(B-AB)=P(B)-P(B\cap AB)=P(B)-P(AB)$.因此，有$P(A+B)=P(A)+P(B)-P(AB)$，证毕.</p>
+</blockquote>
+<p><strong>三个事件的加法公式</strong>：$P(A+B+C)=P(A)+P(B)+P( C )-P(AB)-P(AC)-P(BC)+P(ABC)$</p>
+<p><strong>例题1:</strong> $P(A)=P(B)=P( C )=\frac14,P(AB)=0,P(AC)=P(BC)=\frac1{16}$,求：</p>
+<ol>
+<li>$ABC$中至少发生一个</li>
+<li>$ABC$都不发生</li>
+</ol>
+<h2 id="条件概率">条件概率</h2>
+<p>有的时候，两个事件之间不是相互独立的，往往某个事件的发生与否会对另一个事件的发生可能性产生影响，这个时候，我们就需要使用条件概率公式去描述这种现象了。</p>
+<p><strong>定义1</strong>: 设$\Omega$为样本空间，$A,B$为两个事件且$P(B)&gt;0$,则称在$B$已经发生的条件下$A$发生的概率为$A$对 $B$的条件概率，记作$P(A|B)$</p>
+<p>条件概率的本质是将样本空间从所有事件都发生的$\Omega$缩小到原来仅仅$B$发生的事件的集合$\Omega_B$中去，然后在这个新集合中计算$A$发生的概率。因此条件概率的计算公式就是：</p>
+<p>$$<br>
+P(A|B)=\frac{\Omega_{AB}/ \Omega}{\Omega_B/\Omega}=\frac{P(AB)}{P(B)}<br>
+$$</p>
+<p><strong>例题2</strong>: 编号为$1-6$的球，随机取一个观察其编号，现设$A_1$表示取到$1$号，$A_2$取到$2$号，$A_3$取到大于$4$号的球；$B$表示取到偶数的球。求：</p>
+<ol>
+<li>在取到偶数的情况下取到$2$号球的概率</li>
+<li>在取到偶数的情况下$A_3$发生的概率</li>
+</ol>
+<p><strong>条件概率的性质：</strong></p>
+<ul>
+<li>$P(A|B)\ge 0$</li>
+<li>$P(\Omega|B)=1$</li>
+<li>设$A_1,A_2,\cdots,A_n,n\in N^+$互不相容，则$P(\sum_{i=1}^\infty A_i|B)=\sum_{i=1}^\infty P(A_i|B)$</li>
+</ul>
+<p><strong>条件概率的乘法公式：</strong></p>
+<ul>
+<li>
+<p>$P(AB)=P(B)P(A|B)=P(A)P(B|A)$</p>
+</li>
+<li>
+<p>$P(ABC)=P(A)P(B|A)P(C|AB)$（超过三个可依次类推）</p>
+</li>
+</ul>
+<p><strong>例题3</strong>: 如果天气多云时有雨的概率是$0.3$,  且天气多云的概率是$0.2$，那么天气多云且有雨的概率是？</p>
+<p><strong>课后作业1</strong>： 假设一共有$100$个产品，其中$10$个不合格，现在从中不放回抽取$3$个，问第一次第二次抽到次品并且第三次抽到的才是正品的概率有多大？</p>
+<h2 id="全概率公式">全概率公式</h2>
+<p><strong>定义2</strong>： 设$A_1,A_2,A_3…A_n$是某个完备事件组,且$P(A_i)&gt;0,B$是某个同一样本空间中的其他事件，则有<br>
+$$<br>
+P(B)=\sum_{i=1}^n P(A_i)P(B|A_i)<br>
+$$</p>
+<p>全概率公式的意义在于，当需要求某个事件的发生概率时，我们可以去求该事件在各种不同情况下发生的概率，最终求其总和。</p>
+<p><strong>例题4</strong>: 假设现有$10$个零件，其中$7$个是合格品，$3$个是次品，现已经取走$2$个零件，则问当取第三个零件时，是正品的概率有多大？</p>
+<p><strong>例题5</strong>: 盒子中有$3$个红球和$1$个蓝球，无重复的抽取两个，则第二个球是红色的概率是多少？</p>
+<p><strong>课后作业2</strong>: 假设现在有$10$个产品，其中分别有$0,1,2$个次品的概率均为$\frac13$，并且由于质检存在误差，将正品误检为次品的概率为$0.02$，将次品误检为正品的概率为$0.05$。现在随机从$10$个产品中抽取$1$个送检，则问：该产品检验通过的概率有多少？</p>
+<h2 id="贝叶斯公式">贝叶斯公式</h2>
+<p>贝叶斯公式是一种已知结果反求起因的数学模型，也就是导致某个事件发生的起因有多种，现在已知该事件发生了，那么请问引发该事件发生的各个起因的概率分别是多少？</p>
+<p>其实贝叶斯公式就是一种条件概率公式的变形，其具体定义如下所示：</p>
+<p><strong>定义3</strong>:设$A_1,A_2,A_3…A_n$某个完备事件组，且$P(A_i)&gt;0,B$是同一样本空间中可由$A_1,A_2,A_3…A_n$引发的某个已知事件,则<br>
+$$<br>
+P(A_i|B)=\frac{P(A_iB)}{P(B)}=\frac{P(A_i)P(B|A_i)}{\sum_{i=1}^n P(A_i)P(B|A_i)}<br>
+$$</p>
+<p><strong>例题6</strong>: 设某种疾病的发病概率为$0.0004$，其中由于医院的检测手段存在误差，其中真正的患者被诊断为有病的概率为$0.99$，健康的人被诊断为有病的概率为$0.001$。现某人经医院检查被确诊，则该人确实有病的概率有多大？</p>
+<p><strong>课后作业3</strong>: 设全国有$0.4$的人玩LOL,玩LOL的群体中,$0.7$是男性,不玩LOL的群体中,$0.2$是男性。已知Bob是男性，问：他是LOL玩家的概率是多大？</p>
+<h2 id="事件的独立性">事件的独立性</h2>
+<p>事件的独立性的概念是指：已知一个事件发生不能为我们提供另一个事件是否发生的信息，或一个事件的发生不影响另一个事件的发生概率。即$P(A)=P(A|B)$.进一步地，由于$P(AB)=P(B)P(A|B)$,因此，当两个事件互相独立时，有</p>
+<p>$$<br>
+P(AB)=P(A)P(B)<br>
+$$</p>
+<p>上式子便是两个事件独立的充分必要条件</p>
+<p>独立事件的性质：</p>
+<ul>
+<li>$\phi和\Omega与任意事件A都独立$</li>
+<li>$A与B独立，则A与\bar{B},\bar{A}与B，\bar{A}与\bar{B}都互相独立$</li>
+</ul>
+<p>我们讨论事件多于两个时的独立性问题。我们首先给出事件<strong>两两独立</strong>(pairwise independent)和<strong>互相独立</strong>(mutually independent)的概念。</p>
+<p>所谓两两独立，是指在同一样本空间$\Omega$中有某事件集${A_1,A_2,\cdots ,A_n}$，从其中任意选取两个$A_i,A_j \quad i,j\in 1,2,3\cdots n$,都有 $P(A_iA_j)=P(A_i)P(A_j)$成立。</p>
+<p>所谓互相独立，是指在同一样本空间$\Omega$中有某事件集${A_1,A_2,\cdots ,A_n}$，其任意的子集 $A_{i1},A_{i2},\cdots, A_{im} \quad i1,i2\cdots im \in 1,2,3\cdots n$满足$P(A_{i1}A_{i2}\cdots A_{im})=P(A_{i1})P(A_{i2})\cdots P(A_{im})$</p>
+<p>很显然地，互相独立的定义已经包含了两两独立，若一个事件组是互相独立的，则其必然也是两两独立的。那么反过来的情况如何呢？下例将给出否定的答案：</p>
+<blockquote>
+<p>抛掷两次骰子，令$A$表示第一次得到正面，$B$表示第二次得到正面，C表示总共得到一次正面。则易知<br>
+$P(A)=P(B)=P( C )=\frac12,P(AB)=P(A)P(B)=\frac14$<br>
+$P(AC)=P(A)P(C|A)=\frac14=P(A)P( C ),P(BC)=P(B)P(C|B)=\frac14=P(B)P( C )$<br>
+所以显然此时$ABC$是两两独立的，但是显然$P(ABC)=0 \neq P(A)P(B)P( C )=\frac18$</p>
+</blockquote>
+<p>究其原因，我们可以发现$P(ABC)=P(A)P(B|A)P(C|AB)$,当$ABC$ 两两独立时有$P(B)=P(B|A)$,但是却无法保证$P( C )=P(C|AB)$。 因此我们可以发现，互相独立的概率意义在于:<strong>给出一个事件组并从该事件组中任选一个子集，则该子集中的事件同时发生时，事件组中剩余的任一事件对其保持独立</strong></p>
+<p><strong>例题7</strong>: 一个电路中，第一个元件与第二三个串联起来的元件形成一个并联电路，设$A_i$表示第i个元件保持正常工作，且$P(A_i)=p, i=1,2,3$。 问该电路正常工作的概率是多少？</p>
+<p><strong>课后作业4</strong>: 设有一套密码，每个技术员能够将其破译的概率为$0.6$，并且每个技术员的破译工作都是相互独立的.则问：如果需要以$0.99$以上的可能性将其破译，那么至少需要几个技术员？</p>
+<p><br><br><br><br></p>
+<h3 id="下载链接">下载链接</h3>
+<p><a href="概率统计1——概率.pdf">概率统计1——概率</a></p>
+
+
+        
+        <!-- Pager -->
+        <!-- <ul class="pager">
+          
+          <li class="previous">
+            <a href="/undefined/微积分速查表/" data-toggle="tooltip" data-placement="top" title="微积分速查表">&larr; Previous Post</a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/undefined/Python文件工具/" data-toggle="tooltip" data-placement="top" title="Python文件工具">Next Post &rarr;</a>
+          </li>
+          
+        </ul> -->
+
+        
+
+        
+        
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+       
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">基本概念</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%A6%82%E7%8E%87%E7%9A%84%E5%85%AC%E7%90%86%E5%8C%96%E6%8F%8F%E8%BF%B0"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">概率的公理化描述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%AC%E7%90%86"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本公理</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%85%AC%E7%90%86%E7%9A%84%E6%8E%A8%E8%AE%BA"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">基本公理的推论</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">条件概率</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%A8%E6%A6%82%E7%8E%87%E5%85%AC%E5%BC%8F"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">全概率公式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%85%AC%E5%BC%8F"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">贝叶斯公式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">事件的独立性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">下载链接</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
     
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
+
+
+      <!-- Sidebar Container -->
+      <div class="
                 col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
-
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
-          <span class="tag-text">2023</span>
-        </span>
-        <ul>
-          
-          <li>
-            12-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分1——函数的极限1-定义/" style="color: #0085a1">
-              <span>
-                微积分1——函数的极限1:定义
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-30
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分2——函数的极限2-计算/" style="color: #0085a1">
-              <span>
-                微积分2——函数的极限2:计算
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分3——函数的连续性/" style="color: #0085a1">
-              <span>
-                微积分3——函数的连续性
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分4——导数定义；函数求导法则/" style="color: #0085a1">
-              <span>
-                微积分4——导数定义及函数求导法则
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-27
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分5——函数的微分/" style="color: #0085a1">
-              <span>
-                微积分5——函数的微分
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-26
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分6——微分中值定理/" style="color: #0085a1">
-              <span>
-                微积分6——微分中值定理
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分7——洛必达法则/" style="color: #0085a1">
-              <span>
-                微积分7——洛必达法则
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分8——泰勒公式/" style="color: #0085a1">
-              <span>
-                微积分8——泰勒公式
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分9——不定积分1：定义和性质/" style="color: #0085a1">
-              <span>
-                微积分9——不定积分1：定义和性质
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-22
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分10——不定积分2：第一类换元法/" style="color: #0085a1">
-              <span>
-                微积分10——不定积分2：第一类换元法
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分11——不定积分3：第二类换元法/" style="color: #0085a1">
-              <span>
-                微积分11——不定积分3：第二类换元法
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-20
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分12——不定积分4：分部积分法/" style="color: #0085a1">
-              <span>
-                微积分12——不定积分4：分部积分法
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-19
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分13——定积分1：概念与性质/" style="color: #0085a1">
-              <span>
-                微积分13——定积分1：概念与性质
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-18
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分14——定积分2：微积分基本原理/" style="color: #0085a1">
-              <span>
-                微积分14——定积分2：微积分基本原理
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分15——定积分3：定积分的换元法与分部积分法/" style="color: #0085a1">
-              <span>
-                微积分15——定积分3：定积分的换元法与分部积分法
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-16
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分16——定积分4：反常积分/" style="color: #0085a1">
-              <span>
-                微积分16——定积分4：反常积分
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-15
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分17——微分方程的概念/" style="color: #0085a1">
-              <span>
-                微积分17——微分方程的概念
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-14
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分18——可分离变量的微分方程/" style="color: #0085a1">
-              <span>
-                微积分18——可分离变量的微分方程
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            12-13
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分19——齐次方程/" style="color: #0085a1">
-              <span>
-                微积分19——齐次方程
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-30
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数1——向量及其基本运算/" style="color: #0085a1">
-              <span>
-                线性代数1——向量及其基本运算
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数2——线性空间的张成；线性无关/" style="color: #0085a1">
-              <span>
-                线性代数2——线性空间的张成；线性无关
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-28
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数3——矩阵代数/" style="color: #0085a1">
-              <span>
-                线性代数3——矩阵代数
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-27
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数4——线性方程组及其解的结构/" style="color: #0085a1">
-              <span>
-                线性代数4——线性方程组及其解的结构
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-26
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数5——线性变换/" style="color: #0085a1">
-              <span>
-                线性代数5——线性变换
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数6——逆矩阵/" style="color: #0085a1">
-              <span>
-                线性代数6——逆矩阵
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数7——行列式/" style="color: #0085a1">
-              <span>
-                线性代数7——行列式
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/线性代数8——特征值与特征向量/" style="color: #0085a1">
-              <span>
-                线性代数8——特征值与特征向量
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            11-06
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/微积分速查表/" style="color: #0085a1">
-              <span>
-                微积分速查表
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-31
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/概率统计1——概率/" style="color: #0085a1">
-              <span>
-                概率统计1——概率
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-17
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Python文件工具/" style="color: #0085a1">
-              <span>
-                Python文件工具
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            10-10
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/Pandas时间序列分析/" style="color: #0085a1">
-              <span>
-                Pandas时间序列分析
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/假设检验/" style="color: #0085a1">
-              <span>
-                假设检验
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-18
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/概率统计基础-二-——随机变量及其分布/" style="color: #0085a1">
-              <span>
-                概率统计基础(二)——随机变量及其分布
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            09-13
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/undefined/资源共享/" style="color: #0085a1">
-              <span>
-                资源共享
-                
-                -- undefined
-                
-              </span>
-            </a>
-          </li>
-          
-        </ul>
+        <!-- Featured Tags -->
+        
       </div>
       
     </div>
   </div>
-</div>
+</article>
 
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">FEATURED TAGS</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#Pandas" title="Pandas" rel="1">Pandas</a>
-    
-    
-    
-    <a href="/tags/#Python" title="Python" rel="1">Python</a>
-    
-    
-    
-    <a href="/tags/#抽样分布" title="抽样分布" rel="1">抽样分布</a>
-    
-    
-    
-    <a href="/tags/#t检验" title="t检验" rel="1">t检验</a>
-    
-    
-    
-    <a href="/tags/#单变量" title="单变量" rel="16">单变量</a>
-    
-    
-    
-    <a href="/tags/#不定积分" title="不定积分" rel="4">不定积分</a>
-    
-    
-    
-    <a href="/tags/#定积分" title="定积分" rel="4">定积分</a>
-    
-    
-    
-    <a href="/tags/#极限" title="极限" rel="2">极限</a>
-    
-    
-    
-    <a href="/tags/#连续性" title="连续性" rel="1">连续性</a>
-    
-    
-    
-    <a href="/tags/#求导法则" title="求导法则" rel="1">求导法则</a>
-    
-    
-    
-    <a href="/tags/#中值定理" title="中值定理" rel="1">中值定理</a>
-    
-    
-    
-    <a href="/tags/#微分" title="微分" rel="1">微分</a>
-    
-    
-    
-    <a href="/tags/#洛必达" title="洛必达" rel="1">洛必达</a>
-    
-    
-    
-    <a href="/tags/#泰勒展开" title="泰勒展开" rel="1">泰勒展开</a>
-    
-    
-    
-    <a href="/tags/#速查表" title="速查表" rel="1">速查表</a>
-    
-    
-    
-    <a href="/tags/#随机变量" title="随机变量" rel="1">随机变量</a>
-    
-    
-    
-    <a href="/tags/#正态分布" title="正态分布" rel="1">正态分布</a>
-    
-    
-    
-    <a href="/tags/#向量运算" title="向量运算" rel="1">向量运算</a>
-    
-    
-    
-    <a href="/tags/#线性空间" title="线性空间" rel="1">线性空间</a>
-    
-    
-    
-    <a href="/tags/#线性方程组" title="线性方程组" rel="1">线性方程组</a>
-    
-    
-    
-    <a href="/tags/#线性变换" title="线性变换" rel="1">线性变换</a>
-    
-    
-    
-    <a href="/tags/#逆矩阵" title="逆矩阵" rel="1">逆矩阵</a>
-    
-    
-    
-    <a href="/tags/#行列式" title="行列式" rel="1">行列式</a>
-    
-    
-    
-    <a href="/tags/#特征值" title="特征值" rel="1">特征值</a>
-    
-    
-    
-    <a href="/tags/#特征向量" title="特征向量" rel="1">特征向量</a>
-    
-    
-    
-    <a href="/tags/#动力系统" title="动力系统" rel="1">动力系统</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">ABOUT ME</a></h5>
-  <div class="short-about">
-
-    
-    <img id="avatar_pic" src="/img/avatar/avatar1.jpeg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
-    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
-    
-
-    
-    <p>天地者 万物之逆旅 光阴者 百代之过客 而浮生若梦 为欢几何？</p>
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/Yuenson-stack">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">RECENT POSTS</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../../undefined/%E5%BE%AE%E7%A7%AF%E5%88%861%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%901-%E5%AE%9A%E4%B9%89/">
-      <li>微积分1——函数的极限1:定义</li>
-    </a>
-    
-    <a href="../../../undefined/%E5%BE%AE%E7%A7%AF%E5%88%862%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E7%9A%84%E6%9E%81%E9%99%902-%E8%AE%A1%E7%AE%97/">
-      <li>微积分2——函数的极限2:计算</li>
-    </a>
-    
-    <a href="../../../undefined/%E5%BE%AE%E7%A7%AF%E5%88%863%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%80%A7/">
-      <li>微积分3——函数的连续性</li>
-    </a>
-    
-    <a href="../../../undefined/%E5%BE%AE%E7%A7%AF%E5%88%864%E2%80%94%E2%80%94%E5%AF%BC%E6%95%B0%E5%AE%9A%E4%B9%89%EF%BC%9B%E5%87%BD%E6%95%B0%E6%B1%82%E5%AF%BC%E6%B3%95%E5%88%99/">
-      <li>微积分4——导数定义及函数求导法则</li>
-    </a>
-    
-    <a href="../../../undefined/%E5%BE%AE%E7%A7%AF%E5%88%865%E2%80%94%E2%80%94%E5%87%BD%E6%95%B0%E7%9A%84%E5%BE%AE%E5%88%86/">
-      <li>微积分5——函数的微分</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Archives -->
-
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../2023/12/">December 2023</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/11/">November 2023</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/10/">October 2023</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../2023/09/">September 2023</a><span class="archive-list-count">3</span></li></ul>
-</div>
-
-
-        <hr>
-    
-        <!-- Categories -->
-
-<h5><a href="/categories/">categories</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="/categories/#数据分析">
-      <li>数据分析</li>
-    </a>
-    
-    <a href="/categories/#概率统计">
-      <li>概率统计</li>
-    </a>
-    
-    <a href="/categories/#Calculus">
-      <li>Calculus</li>
-    </a>
-    
-    <a href="/categories/#Probility &amp; Statistics">
-      <li>Probility &amp; Statistics</li>
-    </a>
-    
-    <a href="/categories/#Linear Albebra">
-      <li>Linear Albebra</li>
-    </a>
-    
-  </ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
-  </div>
-</div>
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
