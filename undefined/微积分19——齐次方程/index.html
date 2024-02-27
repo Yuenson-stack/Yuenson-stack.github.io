@@ -320,6 +320,8 @@
           <div class="post-heading">
             <div class="tags">
               
+              <a class="tag" href="/tags/#常微分方程" title="常微分方程">常微分方程</a>
+              
             </div>
             <h1>微积分19——齐次方程</h1>
             <h2 class="subheading"></h2>
@@ -337,7 +339,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">164</span> In Total
+              Words <span class="post-count">295</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -393,7 +395,27 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="参考教材章节">参考教材章节</h3>
+        <h3 id="齐次方程">齐次方程</h3>
+<p>如果一阶微分方程可以化成<br>
+$$<br>
+\begin{equation*}<br>
+\frac{dy}{dx} = \varphi(\frac{y}{x})<br>
+\end{equation*}<br>
+$$</p>
+<p>则称这种形式的方程为齐次方程，在齐次方程中，令$\mu = \frac yx$,则$y = \mu x$, $\frac{dy}{dx}=\mu+x\frac{d\mu}{dx}$,故原方程变为</p>
+<p>$$<br>
+\begin{equation*}<br>
+\mu+x\frac{d\mu}{dx} = \varphi(\mu)<br>
+\end{equation*}<br>
+$$</p>
+<p>分离变量后两端积分，得到</p>
+<p>$$<br>
+\begin{equation*}<br>
+\int \frac{d\mu}{\varphi(\mu)-\mu}= \int\frac{dx}{x}<br>
+\end{equation*}<br>
+$$</p>
+<p>求出积分后，再用$\frac yx$代替$\mu$,便可得多给齐次方程的通解。</p>
+<h3 id="参考教材章节">参考教材章节</h3>
 <ul>
 <li>7.3 齐次方程</li>
 </ul>
@@ -408,7 +430,7 @@ $$</p>
 <p>2.解微分方程</p>
 <p>$$<br>
 \begin{aligned}<br>
-&amp;(1). (y^2-3x^2)dy+2xydx = 0 ,y|<em>{x=0} = 1; &amp;&amp;(2). (x^2+2xy-y^2)dx+(y^2+2xy-x^2)dy = 0,y|</em>{x=1}=1<br>
+&amp;(1). (y^2-3x^2)dy+2xydx = 0 ,y(x=0) = 1 \\ &amp;(2). (x^2+2xy-y^2)dx+(y^2+2xy-x^2)dy = 0,y(x=1)=1<br>
 \end{aligned}<br>
 $$</p>
 <p><br><br><br><br></p>
@@ -428,7 +450,7 @@ $$</p>
           
           
           <li class="next">
-            <a href="/undefined/线性代数1——向量及其基本运算/" data-toggle="tooltip" data-placement="top" title="线性代数1——向量及其基本运算">Next Post &rarr;</a>
+            <a href="/undefined/微积分20——一阶线性微分方程/" data-toggle="tooltip" data-placement="top" title="微积分20——一阶线性微分方程">Next Post &rarr;</a>
           </li>
           
         </ul> -->
@@ -461,7 +483,7 @@ $$</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%BD%90%E6%AC%A1%E6%96%B9%E7%A8%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">齐次方程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
         
         </div>
       </aside>
@@ -523,7 +545,7 @@ $$</p>
         <p class="copyright text-muted">
           Copyright &copy;
           Samson Yuen
-          2023
+          2024
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>

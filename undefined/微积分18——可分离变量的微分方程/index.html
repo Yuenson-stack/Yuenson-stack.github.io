@@ -287,19 +287,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/tag_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-post: url('../img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-page: url('/../img/header_img/categories_bg.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/tag_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('../img/header_img/categories_bg.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/../img/header_img/categories_bg.jpg');
     }
 
     header.intro-header {
        /*post*/
         background-image: var(--intro-header-background-image-url-post);
-        /* background-image: url(''); */
+        /* background-image: url('../img/header_img/categories_bg.jpg'); */
       
     }
 
@@ -320,6 +320,8 @@
           <div class="post-heading">
             <div class="tags">
               
+              <a class="tag" href="/tags/#常微分方程" title="常微分方程">常微分方程</a>
+              
             </div>
             <h1>微积分18——可分离变量的微分方程</h1>
             <h2 class="subheading"></h2>
@@ -337,7 +339,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">197</span> In Total
+              Words <span class="post-count">240</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -393,7 +395,13 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="参考教材章节">参考教材章节</h3>
+        <h3 id="可分离变量的微分方程">可分离变量的微分方程</h3>
+<p>$$<br>
+\begin{equation*}<br>
+h(y)dy = g(x)dx \Rightarrow \int h(y)dy = \int  g(x)dx \Rightarrow H(y)=G(x)+C \Rightarrow y= H^{-1}(G(x)+C)<br>
+\end{equation*}<br>
+$$</p>
+<h3 id="参考教材章节">参考教材章节</h3>
 <ul>
 <li>7.2 可分离变量的微分方程</li>
 </ul>
@@ -408,11 +416,11 @@ $$</p>
 <p>2.解下列微分方程特解</p>
 <p>$$<br>
 \begin{aligned}<br>
-&amp;(1). y^\prime = e^{2x-y},y|<em>{x=0}=0 &amp;&amp;(2).\cos y dx +(1+e^{-x})\sin y dy = 0,y|</em>{x=0}=\frac\pi4<br>
+&amp;(1). y^\prime = e^{2x-y},y(x=0)=0  &amp;&amp;(2).\cos y dx +(1+e^{-x})\sin y dy = 0,y(x=0)=\frac\pi4<br>
 \end{aligned}<br>
 $$</p>
 <p><br><br><br><br></p>
-<p>3.质量为$1g$的点受外力作用做直线运动，该力与时间成正比，和点的运动速度成反比。$t=10s$时，速度等于$50cm/s$，<a target="_blank" rel="noopener" href="http://%E5%A4%96%E5%8A%9B%E4%B8%BA$4g.cm/s%5E2$,%E9%97%AE%E4%BB%8E%E8%BF%90%E5%8A%A8%E5%BC%80%E5%A7%8B%E7%BB%8F%E8%BF%87%E4%BA%86$60s$%E5%90%8E%E7%9A%84%E9%80%9F%E5%BA%A6%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F">外力为$4g.cm/s^2$,问从运动开始经过了$60s$后的速度是多少？</a></p>
+<p>3.质量为$1g$的点受外力作用做直线运动，该力与时间成正比，和点的运动速度成反比。$t=10s$ 时，速度等于 $50cm/s$， 外力为 $4g \cdot cm/s^2 $, 问从运动开始经过了$60s$后的速度是多少？</p>
 <p><br><br><br><br></p>
 <h3 id="下载链接">下载链接</h3>
 <p><a href="微积分18——可分离变量的微分方程.pdf">微积分18——可分离变量的微分方程</a></p>
@@ -461,7 +469,7 @@ $$</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%AF%E5%88%86%E7%A6%BB%E5%8F%98%E9%87%8F%E7%9A%84%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">可分离变量的微分方程</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
         
         </div>
       </aside>
@@ -523,7 +531,7 @@ $$</p>
         <p class="copyright text-muted">
           Copyright &copy;
           Samson Yuen
-          2023
+          2024
           <br>
           Theme by
           <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
