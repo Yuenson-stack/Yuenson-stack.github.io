@@ -335,11 +335,11 @@
             <!-- WordCount start -->
             <div class="blank_box"></div>
             <span class="meta">
-              Estimated Reading Time <span class="post-count">1</span> Minutes
+              Estimated Reading Time <span class="post-count">3</span> Minutes
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">230</span> In Total
+              Words <span class="post-count">704</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -395,7 +395,33 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="参考教材章节">参考教材章节</h3>
+        <h3 id="梯度的几何意义">梯度的几何意义</h3>
+<p>设三元函数的等势面$F(x,y,z)=k$上有一点$P(x_0,y_0,z_0)$,现有过点$P$且存在于该等势面上的某曲线$C$,其方程用向量函数表示为$r(t)=&lt;x(t),y(t),z(t)&gt;$。又设当$t=t_0$时有$r(t_0)=P(x_0,y_0,z_0)$。由于$C$位于等势面上，故$C$上的任意一点$(x(t),y(t),z(t))$必定满足等势面方程，即</p>
+<p>$$<br>
+F(x(t),y(t),z(t))=k<br>
+$$</p>
+<p>以上是一个关于$t$的复合函数，当$x,y,z$对 $t$ 可导且$F$对 $x,y,z$ 可微时，可用多元函数复合求导公式得：</p>
+<p>$$<br>
+\frac{\partial F}{\partial x}\frac{dx}{dt}+\frac{\partial F}{\partial y}\frac{dy}{dt}+\frac{\partial F}{\partial z}\frac{dz}{dt}=0<br>
+$$</p>
+<p>上式又可以变成点积形式:</p>
+<p>$$<br>
+\nabla F\cdot r^\prime(t) = 0<br>
+$$</p>
+<p>当$t=t_0$时，可得</p>
+<p>$$<br>
+\nabla F(x_0,y_0,z_0) \cdot r^\prime(t0) =0<br>
+$$</p>
+<p>这说明，等势面$F$在P点的梯度向量与曲线C在P点的切向量是垂直的；又由于C是过P点的任意曲线。因此不难推知：函数$F$在P点的梯度向量与该函数在P点任意方向的切向量垂直，即<strong>梯度向量垂直于切平面</strong>，利用空间中平面方程可得切平面方程为</p>
+<p>$$<br>
+F_x(x_0,y_0,z_0)(x-x_0)+F_y(x_0,y_0,z_0)(y-y_0)+F_z(x_0,y_0,z_0)(z-z_0)=0<br>
+$$</p>
+<p>函数$z=f(x,y)$既可以看成是一个三维空间中的二元函数，也可以看成是三元函数$F(x,y,z)=z-f(x,y)$在 $k=0$ 时的等势面，在这种情况下，使用上述等势面切平面公式，可得此时$\frac{\partial F}{\partial x}=-f_x(x,y),\frac{\partial F}{\partial y}=-f_y(x,y),\frac{\partial F}{\partial z}=1$，故可得</p>
+<p>$$<br>
+-f_x(x_0,y_0)(x-x_0)-f_y(x_0,y_0)+1\cdot (z-z_0) = 0<br>
+$$</p>
+<p>这就是过去所推过的二元函数切平面的方程。</p>
+<h3 id="参考教材章节">参考教材章节</h3>
 <ul>
 <li>《Calculus》 14.6 Directional Derivatives and Gradient Vector</li>
 </ul>
@@ -434,7 +460,7 @@
           
           
           <li class="next">
-            <a href="/undefined/线性代数1——向量及其基本运算/" data-toggle="tooltip" data-placement="top" title="线性代数1——向量及其基本运算">Next Post &rarr;</a>
+            <a href="/undefined/微积分29——多元函数的极值/" data-toggle="tooltip" data-placement="top" title="微积分29——多元函数的极值">Next Post &rarr;</a>
           </li>
           
         </ul> -->
@@ -467,7 +493,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%A2%AF%E5%BA%A6%E7%9A%84%E5%87%A0%E4%BD%95%E6%84%8F%E4%B9%89"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">梯度的几何意义</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
         
         </div>
       </aside>
