@@ -96,10 +96,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/undefined/微积分2——函数的极限2-计算/">
+  <link rel="canonical" href="http://yoursite-url/undefined/微积分34——重积分的换元法/">
   <title>
     
-      微积分2——函数的极限2:计算 - 朝命而夕饮冰的主页
+      微积分34——重积分的换元法 - 朝命而夕饮冰的主页
     
   </title>
 <meta name="generator" content="Hexo 5.4.0"></head>
@@ -320,16 +320,14 @@
           <div class="post-heading">
             <div class="tags">
               
-              <a class="tag" href="/tags/#单变量" title="单变量">单变量</a>
-              
-              <a class="tag" href="/tags/#极限" title="极限">极限</a>
+              <a class="tag" href="/tags/#多元微积分" title="多元微积分">多元微积分</a>
               
             </div>
-            <h1>微积分2——函数的极限2:计算</h1>
+            <h1>微积分34——重积分的换元法</h1>
             <h2 class="subheading"></h2>
             <span class="meta">
               Posted by Samson Yuen on
-              2023-12-30
+              2023-12-04
             </span>
 
 
@@ -341,7 +339,7 @@
             </span>
             <div class="blank_box"></div>
             <span class="meta">
-              Words <span class="post-count">329</span> In Total
+              Words <span class="post-count">360</span> In Total
             </span>
             <div class="blank_box"></div>
             <!-- WordCount end -->
@@ -397,44 +395,50 @@
       <!-- Post Container -->
       <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-        <h3 id="常用等价无穷小">常用等价无穷小</h3>
+        <h3 id="二重积分的换元法">二重积分的换元法</h3>
+<p>设$f(x, y)$ 在 $x O y$ 平面上的闭区域 $D$ 上连续, 若变换</p>
 <p>$$<br>
-\begin{aligned}<br>
-&amp;[1]. \quad \sin x\sim x \quad (x\to 0) &amp;&amp;[2]. \quad \tan x \sim x \quad (x\to 0)<br>
-\\<br>
-&amp;[3]. \quad  \arcsin x \sim x \quad (x\to 0) &amp;&amp;[4]. \quad  1-\cos x \sim \frac12 x^2 \quad (x\to 0)\\<br>
-&amp;[5]. \quad (1+x)^\alpha \sim \alpha x \quad (x\to 0) \quad \alpha \in R &amp;&amp;[6]. \quad  e^x -1 \sim x \quad (x\to 0)\\<br>
-&amp;[7]. \quad \ln (1+x)\sim x \quad (x\to 0) \\<br>
-\end{aligned}<br>
+T: x=x(u, v), y=y(u, v)<br>
 $$</p>
-<h3 id="重要极限">重要极限</h3>
+<p>将 $u O v$ 平面上的闭区域 $D^\prime$ 变为 $x O y$ 平面上的 $D$, 且满足</p>
+<ol>
+<li>$x(u, v), y(u, v)$ 在 $D^{\prime}$ 上具有一阶连续偏导数;</li>
+<li>在 $D^{\prime}$ 上雅可比式</li>
+<li></li>
+</ol>
 <p>$$<br>
-\begin{aligned}<br>
-&amp;[1]. \quad \lim_{x\to \infty}(1+\frac1x)^x = \lim_{t\to 0}(1+t)^{\frac{1}{t}}=e &amp;&amp;[2]. \quad \lim_{x \to 0} \frac{\sin x}{x}= 1\\<br>
-\end{aligned}<br>
+J(u, v)=\frac{\partial(x, y)}{\partial(u, v)} \neq 0 ;<br>
 $$</p>
-<h3 id="教材参考章节">教材参考章节</h3>
+<ol start="3">
+<li>变换 $T: D^{\prime} \rightarrow D$ 是一对一的,</li>
+</ol>
+<p>则有</p>
+<p>$$<br>
+\iint_D f(x, y) \mathrm{d} x \mathrm{~d} y=\iint_{D^{\prime}} f[x(u, v), y(u, v)]|J(u, v)| \mathrm{d} u \mathrm{~d} v .<br>
+$$</p>
+<p>上式就是二重积分的换元公式，该公式可以推广到$n$重积分的情况。</p>
+<h3 id="参考教材章节">参考教材章节</h3>
 <ul>
-<li>1.4 无穷小与无穷大</li>
-<li>1.5 极限运算法则</li>
-<li>1.6 两个重要极限</li>
-<li>1.7 无穷小的比较</li>
+<li>10.1 二重积分的计算法</li>
 </ul>
 <h3 id="课后作业">课后作业</h3>
 <ol>
-<li>计算下列极限</li>
+<li>作适当的变换, 计算下列二重积分:</li>
 </ol>
-<p>$$<br>
-\begin{aligned}<br>
-&amp;(1). \quad \lim_{x\to 1}\frac{x^2-2x+1}{x^2-1} &amp;&amp; (2). \quad \lim_{x\to 2}\frac{x^3+2x^2}{(x-2)^2} \\<br>
-&amp;(3).\quad \lim_{x\to 0}x^2 \sin\frac 1x &amp;&amp;(4). \quad \lim_{x\to \infty}(\frac{1+x}{x})^{2x}\\<br>
-&amp;(5).\quad \lim_{x\to 0}\frac{\tan 3x}{x} &amp;&amp; (6).\quad \lim_{x\to \infty}(1-\frac1x)^{kx}\\<br>
-&amp;(7). \quad \lim_{x\to 0}\frac{\sin x-\tan x}{(\sqrt[3]{1+x^2}-1)(\sqrt{1+\sin x}-1)} &amp;&amp;(8). \quad \lim_{x \to 0}\frac{\tan x - \sin x}{\sin^3 x}<br>
-\end{aligned}\\<br>
-$$</p>
+<p>$\iint_D x^2 y^2 \mathrm{~d} x \mathrm{~d} y$, 其中 $D$ 是由两条双曲线$xy=1$ 和 $x y=2$, 直线 $y=x$ 和 $y=4 x$ 所围成的在第一象限内的闭区域;</p>
+<p><br><br><br><br></p>
+<ol start="2">
+<li>求由下列曲线所围成的闭区域 $D$ 的面积:</li>
+</ol>
+<p>$D$ 是由曲线 $y=x^3, y=4 x^3, x=y^3, x=4 y^3$ 所围成的第一象限部分的闭区域.</p>
+<p><br><br><br><br></p>
+<ol start="3">
+<li>证明如下不等式</li>
+</ol>
+<p>$\iint_D f(x+y) \mathrm{d} x \mathrm{~d} y=\int_{-1}^1 f(u) \mathrm{d} u$, 其中闭区域 $ D= { (x, y)| |x|+|y| \leq 1 } $;</p>
 <p><br><br><br><br></p>
 <h3 id="下载链接">下载链接</h3>
-<p><a href="微积分2——函数的极限2：计算.pdf">微积分1——函数的极限1:计算</a></p>
+<p><a href="微积分34——重积分的换元法.pdf">微积分34——重积分的换元法</a></p>
 
 
         
@@ -442,12 +446,12 @@ $$</p>
         <!-- <ul class="pager">
           
           <li class="previous">
-            <a href="/undefined/微积分1——函数的极限1-定义/" data-toggle="tooltip" data-placement="top" title="微积分1——函数的极限1:定义">&larr; Previous Post</a>
+            <a href="/undefined/微积分33——曲面面积/" data-toggle="tooltip" data-placement="top" title="微积分33——曲面面积">&larr; Previous Post</a>
           </li>
           
           
           <li class="next">
-            <a href="/undefined/微积分3——函数的连续性/" data-toggle="tooltip" data-placement="top" title="微积分3——函数的连续性">Next Post &rarr;</a>
+            <a href="/undefined/微积分35——含参变量的重积分/" data-toggle="tooltip" data-placement="top" title="微积分35——含参变量的重积分">Next Post &rarr;</a>
           </li>
           
         </ul> -->
@@ -480,7 +484,7 @@ $$</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%B8%B8%E7%94%A8%E7%AD%89%E4%BB%B7%E6%97%A0%E7%A9%B7%E5%B0%8F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">常用等价无穷小</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">重要极限</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E6%95%99%E6%9D%90%E5%8F%82%E8%80%83%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">教材参考章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%BA%8C%E9%87%8D%E7%A7%AF%E5%88%86%E7%9A%84%E6%8D%A2%E5%85%83%E6%B3%95"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">二重积分的换元法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E5%8F%82%E8%80%83%E6%95%99%E6%9D%90%E7%AB%A0%E8%8A%82"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考教材章节</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">课后作业</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%8B%E8%BD%BD%E9%93%BE%E6%8E%A5"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">下载链接</span></a></li></ol>
         
         </div>
       </aside>
